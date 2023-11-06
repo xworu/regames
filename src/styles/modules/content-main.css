@@ -1,0 +1,92 @@
+@import url(../fonts/MontRegular.ttf);
+@import url("https://fonts.cdnfonts.com/css/baloo");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #FFC567;
+  background: linear-gradient(#fff, transparent 2px), linear-gradient(90deg, #fff, transparent 2px), #FFC567;
+  background-size: 73px 73px;
+  background-position: center 30px;
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 51px;
+  padding-bottom: 160px;
+  background: url(/src/img/img_main/star_big.svg), url(/src/img/img_main/star_small.svg), url(/src/img/img_main/square_pink.svg), url(/src/img/img_main/circle_green.svg), url(/src/img/img_main/star_average.svg), url(/src/img/img_main/ring_purple.svg), url(/src/img/img_main/square_red.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top 30px right 335px, top 312px right 42px, top 85px right -76px, right -140px top -570px, top 718px left 306px, left -85px top 650px, top 500px left 80px;
+}
+
+.cloud {
+  width: 327px;
+  height: 196px;
+  background-image: url(../img/img_main/cloud.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-left: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 52px;
+}
+.cloud p {
+  font-family: "Mont";
+  color: #000;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.header {
+  text-align: center;
+}
+.header h1 {
+  color: #FFF;
+  -webkit-text-stroke: 1px #000;
+  text-shadow: 12px 0px 0px #000;
+  font-family: "Baloo";
+  font-size: 200px;
+  font-weight: 400;
+}
+.header p {
+  color: #000;
+  font-family: "Mont";
+  font-size: 48px;
+  font-weight: 600;
+  margin-top: -63px;
+  margin-bottom: 105px;
+}
+
+.button {
+  position: relative;
+  float: right;
+}
+.button button {
+  width: 285px;
+  height: 73px;
+  margin-right: 97px;
+  border-radius: 77px;
+  border: 1px solid #000;
+  background: #009A5E;
+  color: #FFF;
+  text-align: center;
+  font-family: "Mont";
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 73px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.button button:hover {
+  background: #006f44;
+}
+.button .triangles {
+  position: absolute;
+  left: 257px;
+  top: -75px;
+}/*# sourceMappingURL=content-main.css.map */

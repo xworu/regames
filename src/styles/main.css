@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -13,7 +14,6 @@ html {
 }
 
 body {
-  box-sizing: border-box;
   position: relative;
   padding-top: 51px;
   padding-bottom: 160px;

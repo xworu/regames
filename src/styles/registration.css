@@ -1,0 +1,122 @@
+@import url(../fonts/MontRegular.ttf);
+@import url("https://fonts.cdnfonts.com/css/baloo");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #FFC567;
+  background: linear-gradient(#fff, transparent 2px), linear-gradient(90deg, #fff, transparent 2px), #FFC567;
+  background-size: 73px 73px;
+  background-position: center 30px;
+}
+
+body {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 66px;
+  background: url(/src/img/img_reg/star_average.svg), url(/src/img/img_reg/star_small.svg), url(/src/img/img_reg/star_big.svg), url(/src/img/img_reg/ring_purple.svg), url(/src/img/img_reg/square_pink.svg), url(/src/img/img_reg/square_red.svg), url(/src/img/img_reg/circle_blue.svg), url(/src/img/img_reg/circle_green.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top 40px left 166px, top 343px right 142px, top 874px left 280px, top -141px right -136px, top 168px left -50px, top 482px right 350px, top 716px left 300px, top 1060px right -318px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+header h1 {
+  color: #FFF;
+  -webkit-text-stroke: 1px #000;
+  text-shadow: 12px 0px 0px #000;
+  font-family: "Baloo";
+  font-size: 150px;
+  font-weight: 400;
+}
+
+main h1 {
+  text-align: center;
+  color: #000;
+  font-family: "Mont";
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main form {
+  margin: auto;
+  margin-bottom: 45px;
+  width: 667px;
+  background-color: #FC7DA8;
+  border-radius: 15px;
+  border: 1px solid #000;
+  box-shadow: 10px 10px 0px 0px #000;
+  padding: 33px 51px 43px 51px;
+}
+main form p {
+  color: #000;
+  font-family: "Mont";
+  font-size: 32px;
+  font-weight: 600;
+  margin-left: 25px;
+  margin-bottom: 7px;
+}
+main form input {
+  all: initial;
+  box-sizing: border-box;
+  width: 565px;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background: #FFF;
+  margin-bottom: 20px;
+  color: #000;
+  font-family: "Mont";
+  font-size: 24px;
+  font-weight: 600;
+  padding: 8px 25px;
+}
+main form button {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  width: 400px;
+  color: #FFF;
+  text-align: center;
+  font-family: "Mont";
+  font-size: 32px;
+  font-weight: 600;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background: #048CD6;
+  padding: 14px 0px;
+  cursor: pointer;
+}
+main form button:hover {
+  background: #047fc2;
+}
+main h2 {
+  color: #000;
+  text-align: center;
+  font-family: "Mont";
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+main button {
+  display: block;
+  margin: auto;
+  width: 330px;
+  color: #FFF;
+  text-align: center;
+  font-family: "Mont";
+  font-size: 32px;
+  font-weight: 600;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background: #552CB8;
+  padding: 11px 0px;
+  cursor: pointer;
+}
+main button:hover {
+  background: #4b26a0;
+}/*# sourceMappingURL=registration.css.map */

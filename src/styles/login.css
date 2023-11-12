@@ -10,7 +10,7 @@ html {
   background-color: #FFC567;
   background: linear-gradient(#fff, transparent 2px), linear-gradient(90deg, #fff, transparent 2px), #FFC567;
   background-size: 73px 73px;
-  background-position: center 30px;
+  background-position: center 0px;
 }
 
 body {
@@ -24,7 +24,6 @@ body {
 
 header {
   text-align: center;
-  margin-bottom: 56px;
 }
 header h1 {
   color: #FFF;
@@ -36,6 +35,7 @@ header h1 {
 }
 
 main h1 {
+  margin-top: 18px;
   text-align: center;
   color: #000;
   font-family: "Mont";

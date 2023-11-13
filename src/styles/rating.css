@@ -1,0 +1,115 @@
+@import url("https://fonts.cdnfonts.com/css/baloo");
+@font-face {
+  font-family: "Mont-Regular";
+  src: local("Mont-Regular");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Mont Heavy DEMO";
+  src: local("Mont Heavy DEMO"), url("Mont-HeavyDEMO.eot") format("eot"), url("Mont-HeavyDEMO.woff") format("woff"), url("Mont-HeavyDEMO.ttf") format("truetype"), url("Mont-HeavyDEMO.svg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #FFC567;
+  background: linear-gradient(#fff, transparent 2px), linear-gradient(90deg, #fff, transparent 2px), #FFC567;
+  background-size: 73px 73px;
+  background-position: center 0px;
+}
+
+body {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 90px;
+  background: url(/src/img/img_rating/star_average.svg), url(/src/img/img_rating/star_small.svg), url(/src/img/img_rating/star_big.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top 47px right 80px, top 258px left 46px, top 1565px right -30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+header h1 {
+  color: #FFF;
+  -webkit-text-stroke: 1px #000;
+  text-shadow: 12px 0px 0px #000;
+  font-family: "Baloo";
+  font-size: 150px;
+  font-weight: 400;
+}
+header p {
+  margin-top: -60px;
+  color: #000;
+  text-align: center;
+  font-family: "Mont-Regular";
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.my_rating {
+  margin: auto;
+  width: 1274px;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background: #552CB8;
+  padding: 18px 45px;
+  margin-bottom: 104px;
+}
+.my_rating p {
+  display: inline;
+  color: #FFF;
+  font-family: "Mont-Regular";
+  font-size: 32px;
+  font-weight: 600;
+}
+.my_rating .my_point {
+  margin-left: 65px;
+  font-family: "Mont Heavy DEMO";
+}
+.my_rating .place {
+  float: right;
+}
+
+.other_rating div {
+  width: 1274px;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background: #FC7DA8;
+  padding: 18px 88px 18px 45px;
+  margin: auto;
+  margin-bottom: 18px;
+}
+.other_rating div:last-child {
+  margin-bottom: 0px;
+}
+.other_rating .blue {
+  background: #048CD6;
+}
+.other_rating p {
+  display: inline;
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.number {
+  font-family: "Mont Heavy DEMO";
+}
+
+.name {
+  font-family: "Mont-Regular";
+  float: center;
+  margin-left: 68px;
+}
+
+.point {
+  float: right;
+  font-family: "Mont Heavy DEMO";
+}/*# sourceMappingURL=rating.css.map */

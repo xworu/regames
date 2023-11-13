@@ -1,0 +1,199 @@
+@import url(../fonts/MontRegular.ttf);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #FFC567;
+  background: linear-gradient(#fff, transparent 2px), linear-gradient(90deg, #fff, transparent 2px), #FFC567;
+  background-size: 73px 73px;
+  background-position: center 0px;
+}
+
+body {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background: url(/src/img/img_games/ring_purple.svg), url(/src/img/img_games/square_red.svg), url(/src/img/img_games/circle_green.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top -56px left -76px, top 1042px right -58px, top 1115px left -422px;
+}
+
+header {
+  margin-left: 60px;
+  margin-right: 80px;
+  margin-bottom: 126px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.avatar {
+  cursor: pointer;
+}
+
+.star1 {
+  position: absolute;
+  top: 106px;
+  left: -23px;
+}
+
+.star2 {
+  position: absolute;
+  top: -22px;
+  left: 862px;
+}
+
+.arrow {
+  position: absolute;
+  top: 161px;
+  left: 1100px;
+}
+
+.info {
+  position: relative;
+  width: 905px;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background: #FC7DA8;
+  padding: 24px 74px 24px 37px;
+}
+.info p {
+  color: #000;
+  font-family: "Mont";
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 51px;
+       column-gap: 51px;
+  row-gap: 82px;
+  justify-items: center;
+}
+.games div {
+  border-radius: 15px;
+  border: 1px solid #000;
+  width: 372px;
+  text-align: center;
+  font-family: "Mont";
+}
+
+.game {
+  padding-top: 10px;
+  background: #FFF;
+}
+.game p {
+  color: #000;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 8px;
+}
+.game div {
+  width: 372px;
+  margin-left: -1px;
+  height: 300px;
+  border-radius: 0px;
+  margin-bottom: 20px;
+}
+.game button {
+  width: 184px;
+  border-radius: 12px;
+  border: 1px solid #000;
+  margin-bottom: 25px;
+  color: #FFF;
+  font-family: "Mont";
+  font-size: 36px;
+  font-weight: 600;
+  -webkit-text-stroke: 1px #000;
+  cursor: pointer;
+}
+
+.game_1 div {
+  background: #048CD6;
+}
+.game_1 div img {
+  margin-top: 37px;
+}
+.game_1 button {
+  background: #009A5E;
+}
+.game_1 button:hover {
+  background: #008854;
+}
+
+.game_2 div {
+  background: #009A5E;
+}
+.game_2 div img {
+  margin-top: 23px;
+}
+.game_2 button {
+  background: #FD5A47;
+}
+.game_2 button:hover {
+  background: #ed5443;
+}
+
+.game_3 div {
+  background: #FC7DA8;
+}
+.game_3 div img {
+  margin-top: 23px;
+}
+.game_3 button {
+  background: #048CD6;
+}
+.game_3 button:hover {
+  background: #0481c4;
+}
+
+.game_4 div {
+  background: #552CB8;
+}
+.game_4 div img {
+  margin-top: 6px;
+}
+.game_4 button {
+  background: #FC7DA8;
+}
+.game_4 button:hover {
+  background: #ff71a0;
+}
+
+.game_5 div {
+  background: #048CD6;
+}
+.game_5 div img {
+  margin-top: 23px;
+}
+.game_5 button {
+  background: #FFC567;
+}
+.game_5 button:hover {
+  background: #ffbe55;
+}
+
+.loading {
+  position: relative;
+  background: #552CB8;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: space-around;
+}
+.loading p {
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.star3 {
+  position: absolute;
+  bottom: -27px;
+  left: -18px;
+}/*# sourceMappingURL=games.css.map */

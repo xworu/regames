@@ -48,8 +48,8 @@ header {
 
 .arrow {
   position: absolute;
-  top: 161px;
-  left: 1100px;
+  top: 121px;
+  left: 947px;
 }
 
 .info {
@@ -68,6 +68,7 @@ header {
 }
 
 .games {
+  margin: 0px 111px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   -moz-column-gap: 51px;

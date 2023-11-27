@@ -1,4 +1,4 @@
-@import url(../fonts/MontRegular.ttf);
+// @import url(../fonts/MontRegular.ttf);
 @import url('https://fonts.cdnfonts.com/css/baloo');
 
 $plain-text: 'Mont';
@@ -24,7 +24,7 @@ body {
     url(/src/img/img_main/square_pink.svg), url(/src/img/img_main/circle_green.svg), 
     url(/src/img/img_main/star_average.svg), url(/src/img/img_main/ring_purple.svg), url(/src/img/img_main/square_red.svg);
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-    background-position: top 30px right 335px, top 312px right 42px, top 85px right -76px, right -140px top -570px, top 718px left 306px, left -85px top 650px, top 500px left 80px;
+    background-position: top 30px right 363px, top 312px right 13px, top 84px right -105px, right -168px top -570px, top 718px left 306px, left -85px top 650px, top 500px left 80px;
 }
 
 .cloud {

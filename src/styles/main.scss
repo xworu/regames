@@ -1,7 +1,7 @@
-// @import url(../fonts/MontRegular.ttf);
 @import url('https://fonts.cdnfonts.com/css/baloo');
+@import url(/src/styles/montregular.scss);
 
-$plain-text: 'Mont';
+$plain-text: 'MontRegular';
 
 * {
     margin: 0;

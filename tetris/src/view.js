@@ -1,12 +1,12 @@
 export default class View {
 static colors = {
-    '1': 'cyan',
-    '2': 'blue',
-    '3': 'orange',
-    '4': 'yellow',
-    '5': 'green',
-    '6': 'purple',
-    '7': 'red'
+    '1': '#552CB8',
+    '2': '#9033C8',
+    '3': '#009A5E',
+    '4': '#FC7DA8',
+    '5': '#C62170',
+    '6': '#FD5A47',
+    '7': '#FFC567'
 };
 
     constructor(element, width, height, rows, columns) {

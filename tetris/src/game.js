@@ -114,14 +114,14 @@ export default class Game {
                     [5,5,0]
                 ];
                 break;
-            case 'T':
+            case 'Z':
                 piece.blocks = [
                     [0,0,0],
-                    [6,6,6],
-                    [6,0,0]
+                    [6,6,0],
+                    [0,6,6]
                 ];
                 break;
-            case 'Z':
+            case 'T':
                 piece.blocks = [
                     [0,0,0],
                     [7,7,7],

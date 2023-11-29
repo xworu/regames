@@ -1,29 +1,17 @@
 const btnLogin = document.getElementById('login_btn'),
-      name = document.querySelector('#name'),
-      surname = document.querySelector('#surname'),
-      nickname = document.querySelector('#nickname'),
-      password = document.querySelector('#password'),
-      submit = document.querySelector('#submit');
+      form = document.querySelector('form');
+      name = form.querySelector('#name'),
+      surname = form.querySelector('#surname'),
+      nickname = form.querySelector('#nickname'),
+      password = form.querySelector('#password');
 
 btnLogin.addEventListener('click', () => {
     window.location.pathname = '/src/html/login.html';
 })
 
 
-function User(name, surname, nickname, password) {
-    this.name = name;
-    this.surname = surname;
-    this.nickname = nickname;
-    this.password = password;
-}
-
-function createId(users) {
-    return Object.keys(users).length;
-}
-
-submit.addEventListener('click', () => {
-    
-
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
     if (name.value == "" || surname.value == "" || nickname.value == "" || password.value == "") {
         alert("Введите свои данные");
     } else if (!/^[a-zA-Z]+$/.test(name.value)) {
@@ -41,8 +29,8 @@ submit.addEventListener('click', () => {
         getRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         getRequest.send();  
 
-        getRequest.addEventListener('readystatechange', () => {  // отслеживает статус готовности нашего запроса в данный конкретный момент 
-            if (getRequest.readyState === 4 && getRequest.status === 200) {
+        getRequest.addEventListener('load', () => {  // отслеживает статус готовности нашего запроса в данный конкретный момент 
+            if (getRequest.status === 200) {
 
                 const users = JSON.parse(getRequest.response);
                 let k = 0;
@@ -55,7 +43,9 @@ submit.addEventListener('click', () => {
                 });
 
                 if (k == 0) {
-                    createUser();
+                    createUser(form);
+                } else {
+                    form.reset();
                 }
             }
         });
@@ -63,25 +53,30 @@ submit.addEventListener('click', () => {
     
 });
 
-function createUser() {
-    const nameUser = name.value;
-    const surnameUser = surname.value;
-    const nicknameUser = nickname.value;
-    const passwordUser = password.value;
-    
-    const user = JSON.stringify(new User(nameUser, surnameUser, nicknameUser, passwordUser));
-
+function createUser(form) {
     const postRequest = new XMLHttpRequest();
+    postRequest.open('POST', '../server.php');
+    postRequest.setRequestHeader('Content-type', 'application/json');
 
-    postRequest.open('POST', '/src/json/users.json');
-    postRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-    postRequest.send(user);
+    const formData = new FormData(form);
+
+    const user = {};
+    formData.forEach(function(value, key){
+        user[key] = value;
+    });
+
+    postRequest.send(JSON.stringify(user));
+
+    postRequest.addEventListener('load', () => {
+        if (postRequest.status === 200) {
+            console.log(postRequest.response);
+            form.reset();
+        }
+    })
 
     // const userId = 'User' + createId(users);
     // users[userId] = user;
     // const users = JSON.parse(getRequest.response);
-
-    // console.log(JSON.parse(JSON.stringify(users)));
 }
 
 // событие change срабатывет, когда объект уходит из фокуса

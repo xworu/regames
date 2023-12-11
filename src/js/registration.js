@@ -14,9 +14,9 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (name.value == "" || surname.value == "" || nickname.value == "" || password.value == "") {
         alert("Введите свои данные");
-    } else if (!/^[a-zA-Z]+$/.test(name.value)) {
+    } else if (!/^[a-zA-Zа-яА-Я]+$/.test(name.value)) {
         alert("Некорректно введенное имя");
-    } else if (!/^[a-zA-Z]+$/.test(surname.value)) {
+    } else if (!/^[a-zA-Zа-яА-Я]+$/.test(surname.value)) {
         alert("Некорректно введенная фамилия");
     } else if (/\s/.test(nickname.value)) {
         alert("Не используйте пробел в никнейме")
@@ -69,7 +69,7 @@ function createUser(form) {
 
     postRequest.addEventListener('load', () => {
         if (postRequest.status === 200) {
-            console.log(postRequest.response);
+            window.location.pathname = '/src/html/rating.html';
             form.reset();
         }
     })

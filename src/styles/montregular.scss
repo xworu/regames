@@ -1,9 +1,10 @@
 @font-face { 
     font-family: "MontRegular";
-    src: url("../fonts/MontRegular/MontRegular.eot");
-    src: url("../fonts/MontRegular/MontRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/MontRegular/MontRegular.woff") format("woff"),
-    url("../fonts/MontRegular/MontRegular.ttf") format("truetype");
+    src: local("MontRegular"),
+    url("MontRegular.eot"),
+    url("MontRegular.eot?#iefix")format("embedded-opentype"),
+    url("MontRegular.woff") format("woff"),
+    url("MontRegular.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
 }

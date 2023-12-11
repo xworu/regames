@@ -1,6 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/baloo');
-@import url(/src/styles/montregular.scss);
-@import url(/src/styles/montheavydemo.scss);
+@import 'montregular.scss';
+@import 'montheavydemo.scss';
 
 $plain-text: 'MontRegular';
 
@@ -28,8 +28,28 @@ body {
 }
 
 header {
-    text-align: center;
-    margin-bottom: 70px;
+    display: flex;
+    & div {
+        width: 247px;
+        height: 56px;
+        border-radius: 12px;
+        border: 1px solid #000;
+        background: #FFF;
+        display: flex;
+        padding: 8px 11px 8px 23px;
+
+        & img {
+            width: 42px;
+            height: auto;
+        }
+        & p {
+            color: #000;
+            text-align: center;
+            font-family: $plain-text;
+            font-size: 32px;
+            font-weight: 600;
+        }
+    }
     & h1 {
         color: #FFF;
         -webkit-text-stroke: 1px #000;
@@ -37,14 +57,6 @@ header {
         font-family: 'Baloo';
         font-size: 150px;
         font-weight: 400;
-    }
-    & p {
-        margin-top: -60px;
-        color: #000;
-        text-align: center;
-        font-family: $plain-text;
-        font-size: 46px;
-        font-weight: 600;
     }
 }
 
@@ -55,7 +67,7 @@ header {
     border: 1px solid #000;
     background: #552CB8;
     padding: 18px 45px;
-    margin-bottom: 104px;
+    margin-bottom: 58px;
     & p {
         display: inline;
         color: #FFF;

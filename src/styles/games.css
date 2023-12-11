@@ -1,4 +1,9 @@
-@import url(../fonts/MontRegular.ttf);
+@font-face {
+  font-family: "MontRegular";
+  src: local("MontRegular"), url("MontRegular.eot"), url("../fonts/MontRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MontRegular.woff") format("woff"), url("../fonts/MontRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
 * {
   margin: 0;
   padding: 0;
@@ -62,7 +67,7 @@ header {
 }
 .info p {
   color: #000;
-  font-family: "Mont";
+  font-family: "MontRegular";
   font-size: 24px;
   font-weight: 600;
 }
@@ -81,7 +86,7 @@ header {
   border: 1px solid #000;
   width: 372px;
   text-align: center;
-  font-family: "Mont";
+  font-family: "MontRegular";
 }
 
 .game {
@@ -107,7 +112,7 @@ header {
   border: 1px solid #000;
   margin-bottom: 25px;
   color: #FFF;
-  font-family: "Mont";
+  font-family: "MontRegular";
   font-size: 36px;
   font-weight: 600;
   -webkit-text-stroke: 1px #000;

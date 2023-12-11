@@ -1,5 +1,10 @@
 @import url("https://fonts.cdnfonts.com/css/baloo");
-@import url(/src/styles/montregular.scss);
+@font-face {
+  font-family: "MontRegular";
+  src: local("MontRegular"), url("MontRegular.eot"), url("MontRegular.eot?#iefix") format("embedded-opentype"), url("MontRegular.woff") format("woff"), url("MontRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
 * {
   margin: 0;
   padding: 0;

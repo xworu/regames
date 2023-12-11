@@ -23,32 +23,35 @@ form.addEventListener('submit', (e) => {
     } else if (!/^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&?_"]).*$/.test(password.value)) {
         alert("Пароль должен быть длиной не менее 8 символов, содержать хотя бы одну строчную и прописную латинские буквы, цифру и специальный символ: '!#$%&?_'")
     } else {
-        const getRequest = new XMLHttpRequest();
 
-        getRequest.open('GET', '../json/users.json');
-        getRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-        getRequest.send();  
+        fetch
 
-        getRequest.addEventListener('load', () => {  // отслеживает статус готовности нашего запроса в данный конкретный момент 
-            if (getRequest.status === 200) {
+        // const getRequest = new XMLHttpRequest();
 
-                const users = JSON.parse(getRequest.response);
-                let k = 0;
+        // getRequest.open('GET', '../json/users.json');
+        // getRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        // getRequest.send();  
 
-                users.forEach(user => {
-                    if (user.nickname == nickname.value) {
-                        alert('Пользователь с таким ником уже сущестует');
-                        k += 1;
-                    }
-                });
+        // getRequest.addEventListener('load', () => {  // отслеживает статус готовности нашего запроса в данный конкретный момент 
+        //     if (getRequest.status === 200) {
 
-                if (k == 0) {
-                    createUser(form);
-                } else {
-                    form.reset();
-                }
-            }
-        });
+        //         const users = JSON.parse(getRequest.response);
+        //         let k = 0;
+
+        //         users.forEach(user => {
+        //             if (user.nickname == nickname.value) {
+        //                 alert('Пользователь с таким ником уже сущестует');
+        //                 k += 1;
+        //             }
+        //         });
+
+        //         if (k == 0) {
+        //             createUser(form);
+        //         } else {
+        //             form.reset();
+        //         }
+        //     }
+        // });
     }
     
 });

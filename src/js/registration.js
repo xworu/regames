@@ -24,42 +24,83 @@ form.addEventListener('submit', (e) => {
         alert("Пароль должен быть длиной не менее 8 символов, содержать хотя бы одну строчную и прописную латинские буквы, цифру и специальный символ: '!#$%&?_'")
     } else {
 
-        fetch
+        // filter
 
-        // const getRequest = new XMLHttpRequest();
+        // const names = ['Ivan', 'Ann', 'Ksenia', 'Voldemart'];
 
-        // getRequest.open('GET', '../json/users.json');
-        // getRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-        // getRequest.send();  
-
-        // getRequest.addEventListener('load', () => {  // отслеживает статус готовности нашего запроса в данный конкретный момент 
-        //     if (getRequest.status === 200) {
-
-        //         const users = JSON.parse(getRequest.response);
-        //         let k = 0;
-
-        //         users.forEach(user => {
-        //             if (user.nickname == nickname.value) {
-        //                 alert('Пользователь с таким ником уже сущестует');
-        //                 k += 1;
-        //             }
-        //         });
-
-        //         if (k == 0) {
-        //             createUser(form);
-        //         } else {
-        //             form.reset();
-        //         }
-        //     }
+        // const shortNames = names.filter((name) => {
+        //     return name.length < 5;
         // });
+
+        // console.log(shortNames);
+
+
+        // map
+
+        // let answers = ['IvAn', 'AnnA', 'Hello'];
+
+        // answers = answers.map(item => item.toLowerCase());
+
+        // console.log(answers);
+
+
+        // every/some
+
+        // const some = [4, 5, 7];
+
+        // console.log(some.some(item => typeof(item) === 'number'));
+
+        // console.log(some.every(item => typeof(item) === 'number'));
+
+
+        // reduce
+
+        // const arr = [4, 5, 1, 3, 2, 6];
+
+        // const res = arr.reduce((sum, current) => sum + current);
+
+        // console.log(res);
+
+
+        // fetch('', {
+        //     method: "POST",
+        //     body: JSON.stringify(createUser(form)),
+        //     headers: {
+        //         'Content-type': 'application/json'
+        //     }
+        // })
+
+        const getRequest = new XMLHttpRequest();
+
+        getRequest.open('GET', '../json/users.json');
+        getRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        getRequest.send();  
+
+        getRequest.addEventListener('load', () => {  // отслеживает статус готовности нашего запроса в данный конкретный момент 
+            if (getRequest.status === 200) {
+
+                const users = JSON.parse(getRequest.response);
+                let k = 0;
+
+                users.forEach(user => {
+                    if (user.nickname == nickname.value) {
+                        alert('Пользователь с таким ником уже сущестует');
+                        k += 1;
+                    }
+                });
+
+                if (k == 0) {
+                    createUser(form);
+                } else {
+                    form.reset();
+                }
+            }
+        });
     }
     
 });
 
 function createUser(form) {
-    const postRequest = new XMLHttpRequest();
-    postRequest.open('POST', '../server.php');
-    postRequest.setRequestHeader('Content-type', 'application/json');
 
     const formData = new FormData(form);
 
@@ -68,18 +109,22 @@ function createUser(form) {
         user[key] = value;
     });
 
-    postRequest.send(JSON.stringify(user));
-
-    postRequest.addEventListener('load', () => {
-        if (postRequest.status === 200) {
-            window.location.pathname = '/src/html/rating.html';
-            form.reset();
-        }
+    fetch('../server.php', {
+        method: "POST",
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(user)
     })
-
-    // const userId = 'User' + createId(users);
-    // users[userId] = user;
-    // const users = JSON.parse(getRequest.response);
+    .then(data => data.text())
+    .then(data => {
+        console.log(data);
+        // window.location.pathname = '/src/html/rating.html';
+    }).catch(() => {
+        console.log("Что-то пошло не так");
+    }).finally(() => {
+        form.reset();
+    })
 }
 
 // событие change срабатывет, когда объект уходит из фокуса

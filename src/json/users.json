@@ -1,8 +1,10 @@
-[
-    {
-        "name": "Лиза",
-        "surname": "Емельянова",
-        "nickname": "lizokkk_k",
-        "password": "05062004_Liza"
-    }
-]
+{
+    "users": [
+        {
+            "name": "Лиза",
+            "surname": "Емельянова",
+            "nickname": "lizokkk_k",
+            "password": "05062004_Liza"
+        }
+    ]
+}

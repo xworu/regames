@@ -24,6 +24,10 @@ form.addEventListener('submit', (e) => {
         alert("Пароль должен быть длиной не менее 8 символов, содержать хотя бы одну строчную и прописную латинские буквы, цифру и специальный символ: '!#$%&?_'")
     } else {
 
+        fetch('http://localhost:3000/users')
+            .then(data => data.json())
+            .then(res => console.log(res));
+
         // filter
 
         // const names = ['Ivan', 'Ann', 'Ksenia', 'Voldemart'];
@@ -70,62 +74,58 @@ form.addEventListener('submit', (e) => {
         //     }
         // })
 
-        const getRequest = new XMLHttpRequest();
 
-        getRequest.open('GET', '../json/users.json');
-        getRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-        getRequest.send();  
+        
+//         getRequest.addEventListener('load', () => {  // отслеживает статус готовности нашего запроса в данный конкретный момент 
+//             if (getRequest.status === 200) {
 
-        getRequest.addEventListener('load', () => {  // отслеживает статус готовности нашего запроса в данный конкретный момент 
-            if (getRequest.status === 200) {
+//                 const users = JSON.parse(getRequest.response);
+//                 let k = 0;
 
-                const users = JSON.parse(getRequest.response);
-                let k = 0;
+//                 users.forEach(user => {
+//                     if (user.nickname == nickname.value) {
+//                         alert('Пользователь с таким ником уже сущестует');
+//                         k += 1;
+//                     }
+//                 });
 
-                users.forEach(user => {
-                    if (user.nickname == nickname.value) {
-                        alert('Пользователь с таким ником уже сущестует');
-                        k += 1;
-                    }
-                });
-
-                if (k == 0) {
-                    createUser(form);
-                } else {
-                    form.reset();
-                }
-            }
-        });
+//                 if (k == 0) {
+//                     createUser(form);
+//                 } else {
+//                     form.reset();
+//                 }
+//             }
+//         });
     }
     
 });
 
-function createUser(form) {
+// function createUser(form) {
 
-    const formData = new FormData(form);
+//     const formData = new FormData(form);
 
-    const user = {};
-    formData.forEach(function(value, key){
-        user[key] = value;
-    });
+//     const user = {};
+//     formData.forEach(function(value, key){
+//         user[key] = value;
+//     });
 
-    fetch('../server.php', {
-        method: "POST",
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify(user)
-    })
-    .then(data => data.text())
-    .then(data => {
-        console.log(data);
-        // window.location.pathname = '/src/html/rating.html';
-    }).catch(() => {
-        console.log("Что-то пошло не так");
-    }).finally(() => {
-        form.reset();
-    })
-}
+//     fetch('../server.php', {
+//         method: "POST",
+//         headers: {
+//             'Content-type': 'application/json'
+//         },
+//         body: JSON.stringify(user)
+//     })
+//     .then(data => data.text())
+//     .then(data => {
+//         console.log(data);
+//         // window.location.pathname = '/src/html/rating.html';
+//     }).catch(() => {
+//         console.log("Что-то пошло не так");
+//     }).finally(() => {
+//         form.reset();
+//     })
+// }
 
 // событие change срабатывет, когда объект уходит из фокуса
 // событие input происходит каждый раз, когда что-то вводится в input или удаляется из него

@@ -1,10 +1,18 @@
 {
-    "users": [
-        {
-            "name": "Лиза",
-            "surname": "Емельянова",
-            "nickname": "lizokkk_k",
-            "password": "05062004_Liza"
-        }
-    ]
+  "users": [
+    {
+      "name": "dgvsged",
+      "surname": "hhfhhf",
+      "nickname": "lizokkk_p",
+      "password": "05062004_liza",
+      "id": 1
+    },
+    {
+      "name": "sdgw",
+      "surname": "mjdjcjc",
+      "nickname": "lizokkk_d",
+      "password": "05062004_Ojdhf",
+      "id": 2
+    }
+  ]
 }

@@ -75,10 +75,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
         postData('http://localhost:3000/users', json)
         .then(data => {
-            console.log(data);
-            // window.location.pathname = '/src/html/rating.html';
+            window.location.pathname = '/src/html/rating.html';
+            window.location.search = `?id=${data.id}`;
         }).catch(() => {
-            console.log("Что-то пошло не так");
+            alert("Что-то пошло не так");
         }).finally(() => {
             form.reset();
         })

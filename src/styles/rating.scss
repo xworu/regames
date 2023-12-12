@@ -19,36 +19,45 @@ html {
 
 body {
     position: relative;
-    padding-top: 24px;
     padding-bottom: 90px;
     background: url(/src/img/img_rating/star_average.svg), url(/src/img/img_rating/star_small.svg), 
     url(/src/img/img_rating/star_big.svg);
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: top 47px right 80px, top 258px left 46px, top 1565px right -30px;
+    background-position: top 47px right 83px, top 260px left 42px, top 1575px right -26px;
 }
 
 header {
     display: flex;
+    align-items: start;
+    margin-top: 11px;
+    text-align: center;
+    justify-content: space-between;
     & div {
+        margin-top: 66px;
         width: 247px;
         height: 56px;
         border-radius: 12px;
         border: 1px solid #000;
         background: #FFF;
+        margin-left: 70px;
         display: flex;
-        padding: 8px 11px 8px 23px;
-
+        align-items: center;
+        justify-content: center;
+        column-gap: 15px;
         & img {
             width: 42px;
             height: auto;
         }
         & p {
             color: #000;
-            text-align: center;
             font-family: $plain-text;
             font-size: 32px;
             font-weight: 600;
         }
+    }
+    & #none {
+        border: none;
+        background-color: transparent;
     }
     & h1 {
         color: #FFF;
@@ -58,6 +67,69 @@ header {
         font-size: 150px;
         font-weight: 400;
     }
+}
+
+.profile { 
+    position: relative;
+    margin-top: -21px;
+    display: flex;
+    justify-content: end;
+    margin-right: 156px;
+    margin-bottom: 38px;
+    & .back {
+        width: 720px;
+        height: 106px;
+        border-radius: 15px;
+        border: 1px solid #000;
+        background: #FFF;
+        display: grid;
+        justify-content: end;
+        grid-template-rows: repeat(2, 1fr);
+        color: #000;
+        text-align: center;
+        font-family: $plain-text;
+        font-weight: 600;
+        padding: 7px 0px;
+        & .info {
+            margin-right: 110px;
+            & h3 {
+                font-size: 36px; 
+            }
+            & .updata {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                margin-right: 16px;
+                margin-top: -1px;
+                & .pen {
+                    width: 27px;
+                    height: 27px;
+                }
+                & p {
+                    font-size: 32px;
+                    margin-left: 43px;
+                } 
+            }
+            
+        }
+        
+    }
+    & .avatar {
+        position: absolute;
+        width: 124px;
+        height: 124px;
+        top: -13px;
+        right: -33px;
+    }
+}
+
+.title {
+    color: #000;
+    text-align: center;
+    font-family: $plain-text;
+    font-size: 46px;
+    font-weight: 600;
+    margin-bottom: 24px;
 }
 
 .my_rating {

@@ -1,7 +1,7 @@
 @import url("https://fonts.cdnfonts.com/css/baloo");
 @font-face {
   font-family: "MontRegular";
-  src: local("MontRegular"), url("MontRegular.eot"), url("../fonts/MontRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MontRegular.woff") format("woff"), url("../fonts/MontRegular.ttf") format("truetype");
+  src: local("MontRegular"), url("../fonts/MontRegular.eot"), url("../fonts/MontRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MontRegular.woff") format("woff"), url("../fonts/MontRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
@@ -26,24 +26,32 @@ html {
 
 body {
   position: relative;
-  padding-top: 24px;
   padding-bottom: 90px;
   background: url(/src/img/img_rating/star_average.svg), url(/src/img/img_rating/star_small.svg), url(/src/img/img_rating/star_big.svg);
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: top 47px right 80px, top 258px left 46px, top 1565px right -30px;
+  background-position: top 47px right 83px, top 260px left 42px, top 1575px right -26px;
 }
 
 header {
   display: flex;
+  align-items: start;
+  margin-top: 11px;
+  text-align: center;
+  justify-content: space-between;
 }
 header div {
+  margin-top: 66px;
   width: 247px;
   height: 56px;
   border-radius: 12px;
   border: 1px solid #000;
   background: #FFF;
+  margin-left: 70px;
   display: flex;
-  padding: 8px 11px 8px 23px;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
 }
 header div img {
   width: 42px;
@@ -51,10 +59,13 @@ header div img {
 }
 header div p {
   color: #000;
-  text-align: center;
   font-family: "MontRegular";
   font-size: 32px;
   font-weight: 600;
+}
+header #none {
+  border: none;
+  background-color: transparent;
 }
 header h1 {
   color: #FFF;
@@ -63,6 +74,67 @@ header h1 {
   font-family: "Baloo";
   font-size: 150px;
   font-weight: 400;
+}
+
+.profile {
+  position: relative;
+  margin-top: -21px;
+  display: flex;
+  justify-content: end;
+  margin-right: 156px;
+  margin-bottom: 38px;
+}
+.profile .back {
+  width: 720px;
+  height: 106px;
+  border-radius: 15px;
+  border: 1px solid #000;
+  background: #FFF;
+  display: grid;
+  justify-content: end;
+  grid-template-rows: repeat(2, 1fr);
+  color: #000;
+  text-align: center;
+  font-family: "MontRegular";
+  font-weight: 600;
+  padding: 7px 0px;
+}
+.profile .back .info {
+  margin-right: 110px;
+}
+.profile .back .info h3 {
+  font-size: 36px;
+}
+.profile .back .info .updata {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 16px;
+  margin-top: -1px;
+}
+.profile .back .info .updata .pen {
+  width: 27px;
+  height: 27px;
+}
+.profile .back .info .updata p {
+  font-size: 32px;
+  margin-left: 43px;
+}
+.profile .avatar {
+  position: absolute;
+  width: 124px;
+  height: 124px;
+  top: -13px;
+  right: -33px;
+}
+
+.title {
+  color: #000;
+  text-align: center;
+  font-family: "MontRegular";
+  font-size: 46px;
+  font-weight: 600;
+  margin-bottom: 24px;
 }
 
 .my_rating {

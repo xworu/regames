@@ -1,14 +1,14 @@
 window.addEventListener("DOMContentLoaded", () => {
 
     const btnLogin = document.getElementById('login_btn'),
-          form = document.querySelector('form');
+          form = document.querySelector('form'),
           name = form.querySelector('#name'),
           surname = form.querySelector('#surname'),
           nickname = form.querySelector('#nickname'),
           password = form.querySelector('#password');
 
     btnLogin.addEventListener('click', () => {
-        window.location.pathname = '/src/html/login.html';
+        window.location = 'http://regames/src/html/login.html';
     })
 
     const getResource = async (url) => {
@@ -42,14 +42,15 @@ window.addEventListener("DOMContentLoaded", () => {
                     data.forEach(obj => {
                         if (obj.nickname == nickname.value) {
                             alert('Пользователь с таким ником уже сущестует');
-                            form.reset();
                             k += 1;
                         }
                     });
                     if (k == 0) {
                         createUser(form);
                     }
-                });
+                }).finally(() => {
+                    form.reset();
+                })
         }
 
     });
@@ -75,8 +76,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         postData('http://localhost:3000/users', json)
         .then(data => {
-            window.location.pathname = '/src/html/rating.html';
-            window.location.search = `?id=${data.id}`;
+            window.location = `http://regames/src/html/rating.html?id=${data.id}`;
         }).catch(() => {
             alert("Что-то пошло не так");
         }).finally(() => {

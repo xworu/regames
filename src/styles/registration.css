@@ -1,7 +1,7 @@
 @import url("https://fonts.cdnfonts.com/css/baloo");
 @font-face {
   font-family: "MontRegular";
-  src: local("MontRegular"), url("MontRegular.eot"), url("../fonts/MontRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MontRegular.woff") format("woff"), url("../fonts/MontRegular.ttf") format("truetype");
+  src: local("MontRegular"), url("../fonts/MontRegular.eot"), url("../fonts/MontRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MontRegular.woff") format("woff"), url("../fonts/MontRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }

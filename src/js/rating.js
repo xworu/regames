@@ -23,8 +23,11 @@ window.addEventListener("DOMContentLoaded", () => {
                 if (obj.id = header.get("id")) {
                     name.innerHTML = obj.surname + " " + obj.name;
                     nickname.innerHTML = obj.nickname;
-                    points.innerHTML = obj.points;
-                    console.log(obj.points);
+                    if (obj.points / 1000 > 0) {
+                        points.innerHTML = obj.points / 1000 + " " + obj.points % 1000;
+                    } else {
+                       points.innerHTML = obj.points; 
+                    }
                 }
             });
         });

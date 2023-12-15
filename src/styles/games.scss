@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/baloo');
 @import 'montregular.scss';
 
 $plain-text: 'MontRegular';
@@ -25,7 +26,7 @@ body {
     background-position: top -56px left -76px, top 1042px right -58px, top 1115px left -422px;
 }
 
-header {
+.header_reg {
     margin-left: 60px;
     margin-right: 80px;
     margin-bottom: 126px;
@@ -34,7 +35,7 @@ header {
     justify-content: space-between;
 }
 
-.avatar {
+.avatar_reg {
     cursor: pointer;
 }
 
@@ -56,7 +57,7 @@ header {
     left: 947px;
 }
 
-.info {
+.info_reg {
     position: relative;
     width: 905px;
     border-radius: 15px;
@@ -70,6 +71,58 @@ header {
         font-weight: 600;
     }
 }
+
+
+.header_login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: -28px 111px 12px 111px;
+    & h1 {
+        color: #FFF;
+        -webkit-text-stroke: 1px #000;
+        text-align: center;
+        text-shadow: 11px 0px 0px #000;
+        font-family: 'Baloo';
+        font-size: 128px;
+        font-weight: 400;
+    }
+}
+
+.info_login {
+    position: relative;
+    & div {
+        height: 71px;
+        text-align: end;
+        padding: 0px 90px 0px 35px;
+        border-radius: 15px;
+        border: 1px solid #000;
+        background: #FFF;
+        color: #000;
+        font-family: $plain-text;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 71px;
+    }
+    & .avatar_login {
+        position: absolute;
+        width: 104px;
+        height: 104px;
+        top: -17px;
+        right: -34px;
+        cursor: pointer;
+    }
+}
+
+.none {
+    & div {
+        background: transparent;
+        color: transparent;
+        border: none;
+    }
+    
+}
+
 
 .games {
     margin: 0px 111px;
@@ -112,7 +165,6 @@ header {
         font-family: $plain-text;
         font-size: 36px;
         font-weight: 600;
-        -webkit-text-stroke: 1px #000;
         cursor: pointer;
     }
 }

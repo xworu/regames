@@ -66,6 +66,7 @@ header div p {
   font-family: "MontRegular";
   font-size: 32px;
   font-weight: 600;
+  line-height: 56px;
 }
 header #none {
   border: none;

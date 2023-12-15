@@ -1,9 +1,11 @@
 window.addEventListener("DOMContentLoaded", () => {
 
     const name = document.querySelector("#name"),
-          nickname = document.querySelector("#nickname");
+          nickname = document.querySelector("#nickname"),
+          points = document.querySelector(".my_point"),
+          gamesBtn = document.querySelector("#btn");
 
-    const id = new URL(document.location).searchParams;
+    const header = new URL(document.location).searchParams;
 
     const getResource = async (url) => {
         const res = await fetch(url);
@@ -18,17 +20,16 @@ window.addEventListener("DOMContentLoaded", () => {
     getResource('http://localhost:3000/users')
         .then(data => {
             data.forEach(obj => {
-                if (obj.id = id) {
+                if (obj.id = header.get("id")) {
                     name.innerHTML = obj.surname + " " + obj.name;
                     nickname.innerHTML = obj.nickname;
+                    points.innerHTML = obj.points;
+                    console.log(obj.points);
                 }
             });
         });
 
-    // if (header.get("info") !== "404") {
-    //   info.innerHTML += `${header.get("info")}`;
-    // } else if (header.get("info") === "404") {
-    //   info.innerHTML = "Ошибка 404! Данной страницы не существует";
-    // }
-
+    gamesBtn.addEventListener("click", () => {
+        window.location = `http://regames/src/html/games.html?id=${header.get("id")}`;
+    })
 })

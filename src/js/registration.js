@@ -71,6 +71,7 @@ window.addEventListener("DOMContentLoaded", () => {
     function createUser(form) {
 
         const formData = new FormData(form);
+        formData.append("points", 0);
 
         const json = JSON.stringify(Object.fromEntries(formData.entries()));
 

@@ -44,6 +44,10 @@ header {
         align-items: center;
         justify-content: center;
         column-gap: 15px;
+        cursor: pointer;
+        &:hover {
+            background: #e7e7e7;
+        }
         & img {
             width: 42px;
             height: auto;

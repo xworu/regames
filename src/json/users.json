@@ -1,60 +1,12 @@
 {
   "users": [
     {
-      "name": "dgvsged",
-      "surname": "hhfhhf",
-      "nickname": "lizokkk_p",
-      "password": "05062004_liza",
-      "id": 1
-    },
-    {
-      "name": "sdgw",
-      "surname": "mjdjcjc",
-      "nickname": "lizokkk_d",
-      "password": "05062004_Ojdhf",
-      "id": 2
-    },
-    {
-      "name": "dgvsged",
-      "surname": "mjdjcjc",
+      "name": "Лиза",
+      "surname": "Емельянова",
       "nickname": "lizokkk_k",
       "password": "05062004_Liza",
-      "id": 3
-    },
-    {
-      "name": "dfd",
-      "surname": "mjdjcjc",
-      "nickname": "lizokkk_k23",
-      "password": "0506030_Hfgffg",
-      "id": 4
-    },
-    {
-      "name": "dfd",
-      "surname": "ыдлвомьт",
-      "nickname": "lizokkk_k237447",
-      "password": "050608_hfhHhbbc",
-      "id": 5
-    },
-    {
-      "name": "sdgw",
-      "surname": "mjdjcjc",
-      "nickname": "lizokkk_k23744",
-      "password": "05062004_LIza",
+      "points": "120",
       "id": 6
-    },
-    {
-      "name": "dgvsged",
-      "surname": "ыдлвомьт",
-      "nickname": "lizokkk_d5",
-      "password": "05062004_YGbbdh",
-      "id": 7
-    },
-    {
-      "name": "ыупк",
-      "surname": "mjdjcjc",
-      "nickname": "lizokkk_k237dbc",
-      "password": "7575_Jgdgfhbc",
-      "id": 8
     }
   ]
 }

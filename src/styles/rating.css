@@ -52,6 +52,10 @@ header div {
   justify-content: center;
   -moz-column-gap: 15px;
        column-gap: 15px;
+  cursor: pointer;
+}
+header div:hover {
+  background: #e7e7e7;
 }
 header div img {
   width: 42px;

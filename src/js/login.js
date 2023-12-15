@@ -29,13 +29,19 @@ window.addEventListener("DOMContentLoaded", () => {
             alert("Пароль должен быть длиной не менее 8 символов, содержать хотя бы одну строчную и прописную латинские буквы, цифру и специальный символ: '!#$%&?_'")
         } else {
 
+            let k = 0;
+
             getResource('http://localhost:3000/users')
                 .then(data => {
                     data.forEach(obj => {
                         if (obj.nickname == nickname.value && obj.password == password.value) {
                             window.location = `http://regames/src/html/rating.html?id=${obj.id}`;
+                            k += 1;
                         }
                     });
+                    if (k == 0) {
+                        alert("Неправильное имя пользователя или пароль");
+                    }
                 }).finally(() => {
                     form.reset();
                 })

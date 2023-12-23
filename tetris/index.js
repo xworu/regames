@@ -11,3 +11,16 @@ const controller = new Controller(game, view);
 window.game = game;
 window.view = view;
 window.controller = controller;
+
+window.addEventListener("DOMContentLoaded", () => {
+    const restart = document.querySelector('#restart')
+    const goback = document.querySelector('#goback')
+
+    restart.addEventListener('click', () => {
+        window.location.pathname = 'tetris/index.html';
+    })
+
+    goback.addEventListener('click', () => {
+        window.location.pathname = 'src/html/games.html';
+    })
+})

@@ -23,3 +23,52 @@ body {
     border-radius: 2.5%;
     background-color: #048CD6;
 }
+
+header {
+    display: flex;
+    align-items: start;
+    margin-top: 11px;
+    text-align: center;
+    justify-content: space-between;
+  }
+  header div {
+    margin-top: 66px;
+    width: 247px;
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid #000;
+    background: #FFF;
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    cursor: pointer;
+  }
+  header div:hover {
+    background: #e7e7e7;
+  }
+  header div img {
+    width: 42px;
+    height: auto;
+  }
+  header div p {
+    color: #000;
+    font-family: "MontRegular";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 56px;
+  }
+  header #none {
+    border: none;
+    background-color: transparent;
+  }
+  header h1 {
+    color: #FFF;
+    -webkit-text-stroke: 1px #000;
+    text-shadow: 12px 0px 0px #000;
+    font-family: "Baloo";
+    font-size: 150px;
+    font-weight: 400;
+  }

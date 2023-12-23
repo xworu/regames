@@ -1,6 +1,9 @@
 body {
     margin: 0;
-    background-color: black;
+    background-color: #FFC567;
+    background: linear-gradient(#fff, transparent 2px), linear-gradient(90deg, #fff, transparent 2px), #FFC567;
+    background-size: 73px 73px;
+    background-position: center 0px;
 }
 
 #root {
@@ -16,4 +19,7 @@ body {
 #root canvas {
     display: block;
     margin: 0 auto;
+    border: 0.5px solid black;
+    border-radius: 2.5%;
+    background-color: #048CD6;
 }

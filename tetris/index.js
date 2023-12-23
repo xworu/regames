@@ -5,7 +5,7 @@ import Controller from './src/controller.js';
 const root = document.querySelector('#root');
 
 const game = new Game();
-const view = new View(root, 420, 520, 20, 10);
+const view = new View(root, 420, 420, 11, 11);
 const controller = new Controller(game, view);
 
 window.game = game;

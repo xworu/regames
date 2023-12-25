@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const btn_reg = document.querySelector('.avatar_reg'),
           btn_login = document.querySelector('.avatar_login');
           tetris = document.querySelector('#tetris'),
+          snake = document.querySelector('#snake'),
           points = document.querySelector('.my_point');
 
     const header = new URL(document.location).searchParams;
@@ -12,7 +13,11 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 
     tetris.addEventListener('click', () => {
-        window.location = 'http://regames/tetris/index.html';
+        window.location = `http://regames/tetris/index.html?id=${header.get("id")}`;
+    })
+
+    snake.addEventListener('click', () => {
+        window.location = `http://regames/Snake1/index.html?id=${header.get("id")}`;
     })
 
     const getResource = async (url) => {
@@ -25,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
         return await res.json();
     };
 
-    if (header == "") {
+    if (header == "" || header.get("id") == "null") {
         document.querySelector(".header_reg").style.display = "flex";
         document.querySelector(".header_login").style.display = "none";
     } else {

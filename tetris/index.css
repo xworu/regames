@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "MontRegular";
+  src: local("MontRegular"), url("../src/fonts/MontRegular.eot"), url("../src/fonts/MontRegular.eot?#iefix") format("embedded-opentype"), url("../src/fonts/MontRegular.woff") format("woff"), url("../src/fonts/MontRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Mont Heavy DEMO";
+  src: local("Mont Heavy DEMO"), url("Mont-HeavyDEMO.eot") format("eot"), url("Mont-HeavyDEMO.woff") format("woff"), url("Mont-HeavyDEMO.ttf") format("truetype"), url("Mont-HeavyDEMO.svg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
     margin: 0;
     background-color: #FFC567;
@@ -14,43 +27,40 @@ body {
 #root canvas {
     display: block;
     margin: 0 auto;
-    border: 0.5px solid black;
-    border-radius: 2.5%;
+    border: 1px solid black;
+    border-radius: 15px;
     background-color: #048CD6;
 }
 
 header {
     display: flex;
-    align-items: start;
-    margin-top: 11px;
+    align-items: center;
     text-align: center;
     justify-content: space-between;
   }
-  header div img {
-    width: 42px;
-    height: auto;
+  header div {
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
-  header div p {
-    color: #000;
-    font-family: "MontRegular";
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 56px;
-  }
-  header h1 {
+  header div h1 {
     color: #000;
   text-align: center;
   font-family: "MontRegular";
-  font-size: 46px;
+  font-size: 64px;
   font-weight: 600;
-  margin-top: 70px;
+  margin-right: 100px;
+  }
+  header div p {
+    font-family: "Mont Heavy DEMO";
+    font-size: 64px;
+    font-weight: 900;
   }
   header button {
     width: 247px;
     height: 56px;
     border-radius: 12px;
     border: 1px solid #000;
-    margin-top: 70px;
     margin-left: 70px;
     margin-right: 70px;
     display: flex;
@@ -63,4 +73,7 @@ header {
     -moz-column-gap: 15px;
          column-gap: 15px;
     cursor: pointer;
+  }
+  header button:hover {
+    background: #e7e7e7;
   }

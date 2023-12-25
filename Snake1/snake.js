@@ -14,15 +14,6 @@ var heightInBlocks = height / blockSize;
 //----------- Устанавливаем счёт 0 -----------//
 var score = 0;
 
-//----------- Рисуем рамку -----------//
-var drawBorder = function () {
-   ctx.fillStyle = "Gray";
-   ctx.fillRect(0, 0, width, blockSize);
-   ctx.fillRect(0, height - blockSize, width, blockSize);
-   ctx.fillRect(0, 0, blockSize, height);
-   ctx.fillRect(width - blockSize, 0, blockSize, height);
-};
-
 //----------- Выводим счёт игры в левом верхнем углу -----------//
 var drawScore = function () {
    ctx.font = "40px Courier";
@@ -204,3 +195,15 @@ $("body").keydown(function (event) {
 });
 
 
+const header = new URL(document.location).searchParams;
+
+const restart = document.querySelector('#restart');
+const goback = document.querySelector('#goback');
+
+restart.addEventListener('click', () => {
+   window.location = `http://regames/Snake1/index.html?id=${header.get("id")}`;
+})
+
+goback.addEventListener('click', () => {
+   window.location = `http://regames/src/html/games.html?id=${header.get("id")}`;
+})

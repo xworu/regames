@@ -199,6 +199,7 @@ body {
 }
 
 .game_3 {
+    position: relative;
     & div {
        background: #FC7DA8;
        & img {
@@ -213,7 +214,14 @@ body {
     }
 }
 
+.in_developing {
+    position: absolute;
+    top: 73px;
+    left: -14px;
+}
+
 .game_4 {
+    position: relative;
     & div {
         background: #552CB8;
         & img {
@@ -229,6 +237,7 @@ body {
 }
 
 .game_5 {
+    position: relative;
     & div {
         background: #048CD6;
         & img {

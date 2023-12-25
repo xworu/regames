@@ -1,25 +1,30 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head> 
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-        <title>Tetris</title> 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
-        <link rel="stylesheet" href="./index.css"> 
-    </head> 
-    <body>
-        <header>
-            <button type="button" id="goback">
-                <img src="/src/img/img_rating/arrow.svg" alt="arrow">
-                выйти</button>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <header>
+        <button type="button" id="goback">
+            <img src="/src/img/img_rating/arrow.svg" alt="arrow">
+            выйти</button>
+        <div>
             <h1>Баллы:</h1>
-            <button type="button" id="restart">переиграть</button>
-        </header>
-        <div id="root"> 
-        </div> 
-         
-        <script src="./index.js" type="module"></script> 
-    </body> 
+            <p id="points">0</p>
+        </div>
+        <button type="button" id="restart">переиграть</button>
+    </header>
+    <div id="root">
+    </div>
+
+    <script src="./index.js" type="module"></script>
+</body>
+
 </html>

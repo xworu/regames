@@ -1,4 +1,16 @@
-/* Основные стили */
+@font-face {
+	font-family: "MontRegular";
+	src: local("MontRegular"), url("../src/fonts/MontRegular.eot"), url("../src/fonts/MontRegular.eot?#iefix") format("embedded-opentype"), url("../src/fonts/MontRegular.woff") format("woff"), url("../src/fonts/MontRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Mont Heavy DEMO";
+	src: local("Mont Heavy DEMO"), url("Mont-HeavyDEMO.eot") format("eot"), url("Mont-HeavyDEMO.woff") format("woff"), url("Mont-HeavyDEMO.ttf") format("truetype"), url("Mont-HeavyDEMO.svg") format("svg");
+	font-weight: bold;
+	font-style: normal;
+}
+
 * {
 	box-sizing: inherit;
 }
@@ -6,20 +18,71 @@
 html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+	background-color: #FFC567;
+    background: linear-gradient(#fff, transparent 2px), linear-gradient(90deg, #fff, transparent 2px), #FFC567;
+    background-size: 73px 73px;
+    background-position: center 0px;
 }
 
-body {
-	margin: auto;
+canvas {
+	display: block;
+	margin: 0 auto;
 	max-width: 600px;
 	max-height: 600px;
-	padding-top: calc(0.1 * 100%);
-	background-image: url('./img/bg.png');
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	font-family: 'Neucha', cursive;
+	border-radius: 15px;
+	border: 1px solid #000;
+	background: #009A5E;
+	font-family: "MontRegular";
+	margin-bottom: 140px;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+header div h1 {
+  color: #000;
+  text-align: center;
+  font-family: "MontRegular";
+  font-size: 64px;
+  font-weight: 600;
+  margin-right: 100px;
+}
+
+header div p {
+    font-family: "Mont Heavy DEMO";
+    font-size: 64px;
+    font-weight: 900;
+}
+
+header button {
+    width: 247px;
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid #000;
+    margin-left: 70px;
+    margin-right: 70px;
+    display: flex;
+    background: #FFF;
+    font-family: "MontRegular";
+    font-size: 32px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background: #e7e7e7;
+}

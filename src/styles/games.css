@@ -74,7 +74,7 @@ body {
 }
 
 .header_login {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   margin: -28px 111px 12px 111px;
@@ -192,6 +192,9 @@ body {
   background: #ed5443;
 }
 
+.game_3 {
+  position: relative;
+}
 .game_3 div {
   background: #FC7DA8;
 }
@@ -205,6 +208,15 @@ body {
   background: #0481c4;
 }
 
+.in_developing {
+  position: absolute;
+  top: 73px;
+  left: -14px;
+}
+
+.game_4 {
+  position: relative;
+}
 .game_4 div {
   background: #552CB8;
 }
@@ -218,6 +230,9 @@ body {
   background: #ff71a0;
 }
 
+.game_5 {
+  position: relative;
+}
 .game_5 div {
   background: #048CD6;
 }

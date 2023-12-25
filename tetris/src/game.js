@@ -59,10 +59,10 @@ export default class Game {
     createPlayfield() {
         const playfield = [];
         
-        for (let y = 0; y < 20; y++) {
+        for (let y = 0; y < 11; y++) {
             playfield[y] = [];
         
-            for (let x = 0; x < 10; x++) {
+            for (let x = 0; x < 11; x++) {
                 playfield[y][x] = 0;
             }            
         }
@@ -233,8 +233,8 @@ export default class Game {
     }
 
     clearLines() {
-        const rows = 20;
-        const columns = 10;
+        const rows = 11;
+        const columns = 11;
         let lines = [];
 
         for (let y = rows - 1; y >= 0; y--) {

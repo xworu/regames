@@ -5,9 +5,22 @@ import Controller from './src/controller.js';
 const root = document.querySelector('#root');
 
 const game = new Game();
-const view = new View(root, 420, 520, 20, 10);
+const view = new View(root, 420, 420, 11, 11);
 const controller = new Controller(game, view);
 
 window.game = game;
 window.view = view;
 window.controller = controller;
+
+window.addEventListener("DOMContentLoaded", () => {
+    const restart = document.querySelector('#restart')
+    const goback = document.querySelector('#goback')
+
+    restart.addEventListener('click', () => {
+        window.location.pathname = 'tetris/index.html';
+    })
+
+    goback.addEventListener('click', () => {
+        window.location.pathname = 'src/html/games.html';
+    })
+})

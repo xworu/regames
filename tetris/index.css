@@ -1,6 +1,9 @@
 body {
     margin: 0;
-    background-color: black;
+    background-color: #FFC567;
+    background: linear-gradient(#fff, transparent 2px), linear-gradient(90deg, #fff, transparent 2px), #FFC567;
+    background-size: 73px 73px;
+    background-position: center 0px;
 }
 
 #root {
@@ -8,12 +11,56 @@ body {
     text-align: center;
 }
 
-#root h1 {
-    font-family: 'Press Start 2P', Consolas, monospace;
-    color: white;
-}
-
 #root canvas {
     display: block;
     margin: 0 auto;
+    border: 0.5px solid black;
+    border-radius: 2.5%;
+    background-color: #048CD6;
 }
+
+header {
+    display: flex;
+    align-items: start;
+    margin-top: 11px;
+    text-align: center;
+    justify-content: space-between;
+  }
+  header div img {
+    width: 42px;
+    height: auto;
+  }
+  header div p {
+    color: #000;
+    font-family: "MontRegular";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 56px;
+  }
+  header h1 {
+    color: #000;
+  text-align: center;
+  font-family: "MontRegular";
+  font-size: 46px;
+  font-weight: 600;
+  margin-top: 70px;
+  }
+  header button {
+    width: 247px;
+    height: 56px;
+    border-radius: 12px;
+    border: 1px solid #000;
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-right: 70px;
+    display: flex;
+    background: #FFF;
+    font-family: "MontRegular";
+    font-size: 32px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    cursor: pointer;
+  }

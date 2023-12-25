@@ -22,6 +22,6 @@
 # Участники проекта
 [UX/UI-дизайнер, Frontend-разработчик](https://github.com/Lizokkkkk)
 
-Frontend-разработчик игры "Тетрис"
+[Frontend-разработчик игры "Тетрис"](https://github.com/xworu)
 
-Frontend-разработчик игры "Змейка"
+[Frontend-разработчик игры "Змейка"]()

@@ -74,7 +74,7 @@ body {
 
 
 .header_login {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     margin: -28px 111px 12px 111px;
@@ -120,7 +120,6 @@ body {
         color: transparent;
         border: none;
     }
-    
 }
 
 

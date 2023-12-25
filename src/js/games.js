@@ -25,7 +25,10 @@ window.addEventListener("DOMContentLoaded", () => {
         return await res.json();
     };
 
-    if (header != "") {
+    if (header == "") {
+        document.querySelector(".header_reg").style.display = "flex";
+        document.querySelector(".header_login").style.display = "none";
+    } else {
         document.querySelector(".header_reg").style.display = "none";
         document.querySelector(".header_login").style.display = "flex";
 

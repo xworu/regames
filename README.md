@@ -20,7 +20,7 @@
 ```json-server src/json/users.json```
 
 # Участники проекта
-UX/UI-дизайнер, Frontend-разработчик
+[UX/UI-дизайнер, Frontend-разработчик](https://github.com/Lizokkkkk)
 
 Frontend-разработчик игры "Тетрис"
 

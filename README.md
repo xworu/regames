@@ -21,7 +21,7 @@
 ```json-server src/json/users.json```
 
 # Документация
-Пользовательскую документацию можно получить [здесь]().
+Пользовательскую документацию можно получить [здесь](https://github.com/xworu/regames/wiki).
 
 # Участники проекта
   - [UX/UI-дизайнер, Frontend-разработчик](https://github.com/Lizokkkkk)

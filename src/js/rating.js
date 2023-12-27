@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
           points = document.querySelector(".my_point"),
           gamesBtn = document.querySelector("#btn");
 
-    const header = new URL(document.location).searchParams;
+    let header = new URL(document.location).searchParams;
 
     const getResource = async (url) => {
         const res = await fetch(url);
@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
     getResource('http://localhost:3000/users')
         .then(data => {
             data.forEach(obj => {
-                if (obj.id = header.get("id")) {
+                if (obj.id == header.get("id")) {
                     name.innerHTML = obj.surname + " " + obj.name;
                     nickname.innerHTML = obj.nickname;
                     if (obj.points / 1000 > 0) {

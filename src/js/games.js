@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
           snake = document.querySelector('#snake'),
           points = document.querySelector('.my_point');
 
-    const header = new URL(document.location).searchParams;
+    let header = new URL(document.location).searchParams;
 
     btn_reg.addEventListener('click', () => {
         window.location = 'http://regames/src/html/registration.html';
@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", () => {
         getResource('http://localhost:3000/users')
         .then(data => {
             data.forEach(obj => {
-                if (obj.id = header.get("id")) {
+                if (obj.id == header.get("id")) {
                     if (obj.points / 1000 > 0) {
                         points.innerHTML = obj.points / 1000 + " " + obj.points % 1000;
                     } else {
